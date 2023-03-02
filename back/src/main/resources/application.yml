@@ -13,7 +13,7 @@
 #     password: pd_insa
 #     driver-class-name: oracle.jdbc.driver.OracleDriver
 server:
-  port: 8082
+  port: 8081
 
 spring:
   jackson:
