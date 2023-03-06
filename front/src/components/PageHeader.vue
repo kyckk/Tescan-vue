@@ -25,7 +25,7 @@
               |<a href="/equipMent/equip">거래처관리</a>|
               <ul>
                 <li><a href="/equipMent/equip">거래처등록</a></li>
-                <li><a href="/equipMent/equip">거래처현황</a></li>
+                <li><a href="/customer/list">거래처현황</a></li>
               </ul>
             </li>
             <li>
