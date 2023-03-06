@@ -1,35 +1,44 @@
 package com.example.springboot.back.customer.controller;
 import lombok.RequiredArgsConstructor;
+import lombok.extern.slf4j.Slf4j;
+
+import java.util.List;
+
+
 import org.springframework.web.bind.annotation.*;
 
+import com.example.springboot.back.customer.service.CustomerService;
+import com.example.springboot.back.customer.web.CustomerOutput;
 
+
+@Slf4j
 @RequiredArgsConstructor
 @CrossOrigin
 @RestController
 public class CustomerController {
     
-    // private final BoardService boardService;
+    private final CustomerService customerService;
 
-    // @GetMapping("/board/list")
-    // public List<BoardDto> boardList() { return boardService.getBoardList(); }
+    @GetMapping("/customer/list")
+    public List<CustomerOutput> CustomerList() { return customerService.getCustomerList(); }
 
-    // @GetMapping("/board/{id}")
-    // public BoardDto getBoard(@PathVariable Long id) {
-    //     return boardService.getBoard(id);
+    // @GetMapping("/customer/{id}")
+    // public TsCustomerIO getCustomer(@PathVariable Long id,int startPage) {
+    //     return CustomerService.getCustomer(id,startPage);
     // }
 
-    // @PostMapping("/board")
-    // public Board create(@RequestBody BoardDto boardDto) {
-    //     return boardService.create(boardDto);
+    // @PostMapping("/customer")
+    // public TsCustomer create(@RequestBody TsCustomerIO customerIO) {
+    //     return CustomerService.create(customerIO);
     // }
 
-    // // @PatchMapping("/board")
-    // // public Board update(@RequestBody BoardDto boardDto) {
-    // //     return boardService.update(boardDto);
+    // // @PatchMapping("/customer")
+    // // public TsCustomer update(@RequestBody TsCustomerIO customerIO) {
+    // //     return CustomerService.update(customerIO);
     // // }
 
-    // // @DeleteMapping("/board/{id}")
+    // // @DeleteMapping("/customer/{id}")
     // // public void delete(@PathVariable Long id) {
-    // //     boardService.delete(id);
+    // //     CustomerService.delete(id);
     // // }
 }
