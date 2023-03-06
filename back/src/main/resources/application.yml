@@ -35,6 +35,6 @@ spring:
     driver-class-name: oracle.jdbc.driver.OracleDriver
   # datasource:
   #   url: jdbc:oracle:thin:@LOCALHOST:1521:XE
-  #   username: system 
-  #   password: system
+  #   username: test2 
+  #   password: 1234
   #   driver-class-name: oracle.jdbc.driver.OracleDriver
