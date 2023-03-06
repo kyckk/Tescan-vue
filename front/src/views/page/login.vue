@@ -60,15 +60,21 @@
     },
   submit () {
     this.userInfo = { // 데이터 전송
-      email:this.email,
-      password:this.password
-      }
-      this.$axios.get(this.$serverUrl+"/api/account/login",this.userInfo).then((res) => {
-        console.log(res)
-        //window.alert("로그인하였습니다.");
-      }).catch(() => {
-        //window.alert("로그인 정보가 존재하지 않습니다..");
-      });
+     contentId:this.email,
+     contentPw:this.password
+     }
+     this.$axios.get(this.$serverUrl+"/api/account/login",this.userInfo).then((res) => {
+       console.log(res);
+       if(res.data!="0"){
+        window.alert("로그인하였습니다.");
+        this.$router.push({path:"/board/list"});
+       }else{
+        window.alert("로그인 정보가 존재하지 않습니다..");
+       }
+      
+     }).catch(() => {
+       window.alert("로그인 정보가 존재하지 않습니다..");
+     });
     }
   }
 

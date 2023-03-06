@@ -1,6 +1,8 @@
 <template>
+  <div>
   <PageHeader/> <!-- 헤더 컴포넌트 -->
   <router-view/>  <!-- 페이지 이동이 표시될 곳 -->
+  </div>
 </template>
 
 <script>
