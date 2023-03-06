@@ -24,7 +24,7 @@ spring:
     open-in-view: false
     show-sql: true
     generate-ddl: true
-    defer-datasource-initialization: true
+    defer-datasource-initialization: true  
   devtools:
     livereload:
       enabled: true
